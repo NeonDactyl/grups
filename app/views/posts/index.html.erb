@@ -1,0 +1,11 @@
+<h1>all posts</h1>
+<% @posts.each do |post| %>
+  <article class="post">
+    <p><%= post.text %></p>
+    <p><%= link_to time_ago_in_words(post.created_at), post_url(post) %></p>
+  </article>
+  <p>
+    <%= link_to "Edit Post", edit_post_url(post) %>
+  </p>
+  <hr>
+<% end %>

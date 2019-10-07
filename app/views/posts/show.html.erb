@@ -1,0 +1,7 @@
+<article class="post">
+  <p><%= @post.text %></p>
+  <p><%= time_ago_in_words(@post.created_at) %></p>
+  <p>
+    <%= link_to "Edit Post", edit_post_url(@post) %>
+  </p>
+</article>
